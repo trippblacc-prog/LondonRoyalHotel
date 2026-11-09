@@ -1,0 +1,170 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #1E3A70;
+    --burgundy: #8B1E2B;
+    --gold: #D4A359;
+    --cream: #F3E8D8;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--cream);
+    min-height: 100vh;
+    color: #333;
+}
+
+.dashboard-header {
+    background: var(--navy);
+    padding: 15px 5%;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header-content img {
+    width: 145px;
+}
+
+#logout-btn {
+    padding: 11px 22px;
+    background: var(--burgundy);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: .95rem;
+    cursor: pointer;
+}
+
+#logout-btn:hover {
+    background: #701722;
+}
+
+.dashboard-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.welcome-section {
+    margin-bottom: 40px;
+}
+
+.welcome-section h1 {
+    color: var(--navy);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.welcome-section p,
+.section-heading p {
+    color: #666;
+}
+
+.availability-section {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .07);
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.apartment-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.apartment-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 9px;
+    padding: 22px;
+}
+
+.apartment-card h3 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.status.available {
+    background: #e5f5e9;
+    color: #18733a;
+}
+
+.status.unavailable {
+    background: #fbe8e8;
+    color: #a32222;
+}
+
+.toggle-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: .95rem;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background: #14294f;
+}
+
+.toggle-btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+#dashboard-message {
+    margin-top: 20px;
+    font-size: .95rem;
+}
+
+@media (max-width: 650px) {
+    .dashboard-container {
+        margin: 30px auto;
+    }
+
+    .availability-section {
+        padding: 20px;
+    }
+
+    .apartment-list {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.6rem;
+    }
+}

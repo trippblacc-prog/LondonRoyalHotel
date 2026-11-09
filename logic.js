@@ -131,7 +131,7 @@ if (bookingForm) {
             return;
         }
 
-        const hotelWhatsApp = "2349044682459";
+        const hotelWhatsApp = "2347068629376";
         const roomName = rooms[selectedRoom].name;
         
         const checkIn = document.querySelector("#check-in")?.value || "";
@@ -140,7 +140,7 @@ if (bookingForm) {
         const guestPhone = document.querySelector("#guest-phone")?.value || "";
         const guestMessage = document.querySelector("#guest-message")?.value || "";
 
-        const message = `Hello Louisiana Hotels & Suites,\n\n` +
+        const message = `Hello London Royal Hotel,\n\n` +
             `I would like to request a booking.\n\n` +
             `Room: ${roomName}\n` +
             `Check-in: ${checkIn}\n` +

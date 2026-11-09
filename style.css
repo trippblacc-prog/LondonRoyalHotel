@@ -1,728 +1,1223 @@
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 :root {
-    --navy: #1E3A70;
-    --burgundy: #8B1E2B;
-    --gold: #D4A359;
-    --cream: #F3E8D8;
-    --walnut: #4A2E1B;
+
+    --navy: #07518A;
+
+    --burgundy: #008BE5;
+
+    --gold: #D5B98A;
+
+    --cream: #F8F3E9;
+
+    --walnut: #4A3824;
+
     --white: #ffffff;
-    --text-dark: #24324a;
+
+    --text-dark: #252525;
+
     --text-light: #6b7280;
+
 }
 
 body {
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     overflow-x: hidden;
+
     background-color: var(--cream);
+
     color: var(--text-dark);
+
 }
 
 #root {
+
     width: 100%;
+
     margin: auto;
+
 }
 
 /* Header & Nav */
+
 #header {
+
     display: flex;
+
     flex-wrap: wrap;
+
     align-items: center;
+
     justify-content: space-between;
+
     padding: 15px 5%;
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
+
     background: var(--navy);
+
     backdrop-filter: blur(8px);
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 
 /*.logo {
-    color: #8b5cf6;
+
+    color: #008be5;
+
     font-size: 1.6rem;
+
     font-weight: 700;
+
 }*/
 
 figure {
+
     margin: 0;
+
 }
 
 figure img {
+
     display: block;
+
     width: 150px;
+
     height: auto;
+
 }
 
 nav {
+
     position: relative;
+
     width: 320px;
+
 }
 
 nav ul {
+
     display: flex;
+
     list-style: none;
+
     width: 100%;
+
 }
 
 nav ul li {
+
     flex: 1;
+
 }
 
 nav ul li a {
+
     display: block;
+
     text-align: center;
+
     height: 40px;
+
     line-height: 40px;
+
     text-decoration: none;
+
     color: var(--white);
+
     font-size: 0.95rem;
+
     font-weight: 500;
+
     transition: color 0.3s ease;
+
 }
 
 nav ul li a:hover {
+
     color: var(--gold);
+
 }
 
 .slide {
+
     position: absolute;
+
     bottom: 0;
+
     left: 0;
+
     width: 25%;
+
     height: 3px;
+
     background: var(--gold);
+
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
     border-radius: 2px;
+
 }
 
 /* Hero Section */
+
 #hero-section {
+
     background: linear-gradient(
-            rgba(30, 58, 112, 0.72),
-            rgba(30, 58, 112, 0.82)
-        ), 
+
+            rgba(0, 81, 138, 0.68),
+
+            rgba(0, 81, 138, 0.78)
+
+        ),
+
                 url('images/Louisiana-Hotels-chandelier.jpg') center/cover no-repeat;
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     min-height: 85vh;
+
     width: 100%;
+
     padding: 20px;
+
     text-align: center;
+
 }
 
 #herotext h1 {
+
     font-family: "Cormorant Upright", serif;
+
     color: var(--white);
+
     font-size: clamp(2.5rem, 5vw, 4.5rem);
+
     margin-bottom: 10px;
+
     text-shadow:0 1px 2px rgba(0, 0, 0, 0.15);
+
 }
 
 #herotext h3 {
+
     font-family: "Cormorant Upright", serif;
+
     color: var(--gold);
+
     font-size: clamp(1.2rem, 3vw, 2.2rem);
+
     text-transform: uppercase;
+
     letter-spacing: 2px;
+
     margin-bottom: 15px;
+
 }
 
 #herotext p {
+
     font-family: "Cormorant Upright", serif;
+
     color: var(--white);
+
     font-size: clamp(1rem, 2vw, 1.25rem);
+
     max-width: 600px;
+
     margin: 0 auto 25px auto;
+
 }
 
 .hero-btn {
+
     display: inline-block;
+
     padding: 12px 28px;
-    background: #8b5cf6;
+
+    background: #008be5;
+
     color: #fff;
+
     text-decoration: none;
+
     border-radius: 30px;
+
     font-weight: 600;
+
     transition: background 0.3s ease, transform 0.2s ease;
+
 }
 
 .hero-btn:hover {
-    background: #7c3aed;
+
+    background: #07518A;
+
     transform: translateY(-2px);
+
 }
 
 /* Section Title */
+
 .section-container {
+
     padding: 60px 5%;
+
 }
 
 .section-title {
+
     text-align: center;
+
     font-size: 2rem;
+
     margin-bottom: 40px;
-    color: #f8fafc;
+
+    color: #252525;
+
 }
 
 /* Apartment Cards */
-#services { 
+
+#services {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 25px;
-    justify-content: center; 
-    width: 100%; 
-    margin-top: 5px; 
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: 5px;
+
     padding: 40px 5%; }
 
 .service-cards {
-    flex: 1 1 300px; 
-    max-width: 450px; 
-    min-height: 420px; 
-    border-radius: 16px; 
-    overflow: hidden; 
-    position: relative; 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); 
-    background-position: center; 
-    background-size: cover; 
-    background-repeat: no-repeat; 
+
+    flex: 1 1 300px;
+
+    max-width: 450px;
+
+    min-height: 420px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .service-cards:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 15px 30px rgba(30, 58, 112, 0.25);
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(0, 139, 229, 0.22);
+
 }
 
 .card-overlay {
-    background: linear-gradient( to top, rgba(30, 58, 112, 0.97) 15%, rgba(30, 58, 112, 0.75) 55%, rgba(30, 58, 112, 0.15) 100% ); 
-    min-height: 420px; width: 100%; 
-    display: flex; flex-direction: column; 
-    justify-content: flex-end; 
+
+    background: linear-gradient( to top, rgba(7, 81, 138, 0.97) 15%, rgba(7, 81, 138, 0.78) 55%, rgba(7, 81, 138, 0.18) 100% );
+
+    min-height: 420px; width: 100%;
+
+    display: flex; flex-direction: column;
+
+    justify-content: flex-end;
+
     padding: 25px;
+
 }
 
 .card-overlay h3 {
-    font-size: 1.5rem; 
-    margin-bottom: 8px; 
+
+    font-size: 1.5rem;
+
+    margin-bottom: 8px;
+
     color: #ffffff;
+
 }
 
-.card-overlay .description { 
-    color: #ffffff; 
-    line-height: 1.5; 
-    margin-bottom: 12px; 
+.card-overlay .description {
+
+    color: #ffffff;
+
+    line-height: 1.5;
+
+    margin-bottom: 12px;
+
 }
 
 .card-overlay .price {
-    color: #D4A359; 
-    font-size: 1.2rem; 
-    font-weight: 700; 
+
+    color: #D5B98A;
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
     margin-bottom: 15px;
+
 }
 
-.card-overlay .amenities { 
-    color: #F3E8D8; 
-    font-size: 0.9rem; 
+.card-overlay .amenities {
+
+    color: #F8F3E9;
+
+    font-size: 0.9rem;
+
     margin-bottom: 12px;}
 
 .amenities li {
+
     font-size: 0.9rem;
+
     color: #94a3b8;
+
     margin-bottom: 4px;
+
 }
 
-.room-btn { 
-    display: inline-block; 
-    width: fit-content; 
-    padding: 11px 20px; 
-    background: #8B1E2B; 
-    color: #ffffff; 
-    text-decoration: none; 
-    border-radius: 6px; font-weight: 600; 
-    transition: background 0.3s ease, transform 0.2s ease; 
-} 
-    
+.room-btn {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 11px 20px;
+
+    background: #008BE5;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 6px; font-weight: 600;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+
+}
+
 .room-btn:hover {
-    background: #701722; 
-    transform: translateY(-2px); 
-}
 
+    background: #07518A;
+
+    transform: translateY(-2px);
+
+}
 
 .room-btn.unavailable {
+
     background: #475569;
+
     cursor: not-allowed;
+
     opacity: 0.7;
+
 }
 
 .room-btn.unavailable:hover {
+
     background: #475569;
+
     transform: none;
+
 }
 
-
 #card1{
+
     background-image: url(images/Louisiana-Hotels-room1.jpg);
+
 }
 
 #card2{
+
     background-image: url(images/Louisiana-Hotels-room2.jpg);
+
 }
 
 #card3{
+
     background-image: url(images/Louisiana-Hotels-room3.jpg);
+
 }
 
 #card4{
+
     background-image: url(images/Louisiana-Hotels-room.jpg);
+
 }
 
-/* Mobile */ 
+/* Mobile */
+
 @media (max-width: 600px) {
-    #services { 
-        padding: 30px 5%; 
-        gap: 20px; 
-    } 
-    .service-cards { 
-        min-height: 400px; 
-    } 
-    .card-overlay { 
-        min-height: 400px; 
-        padding: 20px; 
-    } 
-    .card-overlay h3 { 
-        font-size: 1.35rem; 
-    } 
-    .card-overlay .description { 
-        font-size: 0.95rem; 
-    } 
+
+    #services {
+
+        padding: 30px 5%;
+
+        gap: 20px;
+
+    }
+
+    .service-cards {
+
+        min-height: 400px;
+
+    }
+
+    .card-overlay {
+
+        min-height: 400px;
+
+        padding: 20px;
+
+    }
+
+    .card-overlay h3 {
+
+        font-size: 1.35rem;
+
+    }
+
+    .card-overlay .description {
+
+        font-size: 0.95rem;
+
+    }
+
 }
 
 .availability {
+
     font-size: 0.9rem;
+
     font-weight: 600;
-    color: #D4A359;
+
+    color: #D5B98A;
+
     margin-bottom: 12px;
+
 }
 
 .availability.unavailable {
-    color: #F3E8D8;
+
+    color: #F8F3E9;
+
 }
 
-
-
 /* =========================
+
 ABOUT SECTION
+
 ========================= */
 
 #about {
+
 padding-top: 90px;
+
 padding-bottom: 90px;
+
 }
 
 .about-content {
+
 display: flex;
+
 align-items: center;
+
 justify-content: space-between;
+
 gap: 60px;
+
 max-width: 1200px;
+
 margin: auto;
+
 }
 
 .about-text {
+
 flex: 1;
+
 }
 
 .about-text .section-title {
+
 text-align: left;
+
 margin-bottom: 20px;
+
 color: var(--gold);
+
 text-shadow:0 1px 2px rgba(0, 0, 0, 0.15);
+
 }
 
 .section-label {
+
 display: inline-block;
-color: #8b5cf6;
+
+color: #008be5;
+
 font-size: 0.8rem;
+
 font-weight: 700;
+
 letter-spacing: 2px;
+
 margin-bottom: 12px;
+
 }
 
 .about-text p {
+
 /*color: #94a3b8;*/
-color: #000;
+
+color: var(--text-dark);
+
 line-height: 1.8;
+
 margin-bottom: 15px;
+
 max-width: 600px;
+
 }
 
 .about-btn {
+
 display: inline-block;
+
 margin-top: 15px;
+
 padding: 12px 25px;
+
 background: var(--burgundy);
+
 color: var(--white);
+
 text-decoration: none;
+
 border-radius: 8px;
+
 font-weight: 600;
+
 transition: background 0.3s ease, transform 0.2s ease;
+
 }
 
 .about-btn:hover {
-background: #701722;
+
+background: #07518A;
+
 transform: translateY(-2px);
+
 }
 
 .about-image {
+
 flex: 1;
+
 max-width: 500px;
+
 }
 
 .about-image img {
+
 display: block;
+
 width: 100%;
+
 height: 400px;
+
 object-fit: cover;
+
 border-radius: 16px;
+
 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
 }
 
 /* =========================
+
 BOOKING SECTION
+
 ========================= */
 
 #booking {
-background: #111c32;
+
+background: var(--cream);
+
 }
 
 .booking-container {
+
 max-width: 750px;
+
 margin: auto;
-background: #0f172a;
+
+background: #ffffff;
+
 padding: 40px;
+
 border-radius: 16px;
-border: 1px solid rgba(255, 255, 255, 0.08);
-box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+
+border: 1px solid rgba(7, 81, 138, 0.12);
+
+box-shadow: 0 15px 35px rgba(7, 81, 138, 0.12);
+
 }
 
 .booking-heading {
+
 text-align: center;
+
 margin-bottom: 35px;
+
 }
 
 .booking-heading .section-title {
+
 margin-bottom: 10px;
+
 }
 
 .booking-heading p {
-color: #94a3b8;
+
+color: #6b7280;
+
 line-height: 1.6;
+
 }
 
 /* Form */
 
 #booking-form {
+
 display: flex;
+
 flex-direction: column;
+
 gap: 20px;
+
 }
 
 .form-group {
+
 display: flex;
+
 flex-direction: column;
+
 gap: 8px;
+
 }
 
 .form-group label {
-color: #e2e8f0;
+
+color: #252525;
+
 font-size: 0.9rem;
+
 font-weight: 600;
+
 }
 
 .form-group input,
+
 .form-group select,
+
 .form-group textarea {
+
 width: 100%;
+
 padding: 13px 15px;
-border: 1px solid rgba(255, 255, 255, 0.1);
+
+border: 1px solid rgba(7, 81, 138, 0.18);
+
 border-radius: 8px;
-background: #1e293b;
-color: #ffffff;
+
+background: #ffffff;
+
+color: #252525;
+
 font-family: inherit;
+
 font-size: 0.95rem;
+
 outline: none;
+
 transition: border-color 0.3s ease;
+
 }
 
 .form-group input:focus,
+
 .form-group select:focus,
+
 .form-group textarea:focus {
-border-color: #8b5cf6;
+
+border-color: #008be5;
+
 }
 
 .form-group textarea {
+
 resize: vertical;
+
 }
 
 .form-group select option {
-background: #1e293b;
-color: #ffffff;
+
+background: #ffffff;
+
+color: #252525;
+
 }
 
 /* Room availability */
 
 .room-status {
+
 display: flex;
+
 align-items: center;
+
 gap: 10px;
+
 padding: 12px 15px;
-background: rgba(255, 255, 255, 0.04);
+
+background: rgba(0, 139, 229, 0.06);
+
 border-radius: 8px;
-color: #94a3b8;
+
+color: #6b7280;
+
 font-size: 0.9rem;
+
 }
 
 .status-dot {
+
 width: 9px;
+
 height: 9px;
+
 border-radius: 50%;
+
 background: #94a3b8;
+
 flex-shrink: 0;
+
 }
 
 .room-status.available .status-dot {
+
 background: #22c55e;
+
 }
 
 .room-status.available {
+
 color: #22c55e;
+
 }
 
 .room-status.unavailable .status-dot {
+
 background: #ef4444;
+
 }
 
 .room-status.unavailable {
+
 color: #ef4444;
+
 }
 
 /* Two-column form fields */
 
 .booking-fields {
+
 display: grid;
+
 grid-template-columns: 1fr 1fr;
+
 gap: 20px;
+
 }
 
 /* Booking button */
 
 #booking-btn {
+
 width: 100%;
+
 padding: 14px;
+
 border: none;
+
 border-radius: 8px;
-background: #8b5cf6;
+
+background: #008be5;
+
 color: #ffffff;
+
 font-family: inherit;
+
 font-size: 1rem;
+
 font-weight: 700;
+
 cursor: pointer;
+
 transition: background 0.3s ease, transform 0.2s ease;
+
 }
 
 #booking-btn:hover {
-background: #7c3aed;
+
+background: #07518A;
+
 transform: translateY(-2px);
+
 }
 
 #booking-btn:disabled {
+
 background: #475569;
+
 cursor: not-allowed;
+
 transform: none;
+
 }
 
 /* =========================
+
 CALL TO ACTION
+
 ========================= */
 
 #cta {
+
 padding: 100px 5%;
+
 text-align: center;
+
 background:
+
 linear-gradient(
-rgba(15, 23, 42, 0.85),
-rgba(15, 23, 42, 0.95)
+
+rgba(7, 81, 138, 0.82),
+
+rgba(7, 81, 138, 0.92)
+
 ),
+
 url('images/Louisiana-Hotels-room1.jpg') center/cover no-repeat;
+
 }
 
 .cta-content {
+
 max-width: 700px;
+
 margin: auto;
+
 }
 
 .cta-content h2 {
+
 font-size: clamp(2rem, 5vw, 3.5rem);
+
 margin-bottom: 15px;
+
 }
 
 .cta-content p {
+
 color: #cbd5e1;
+
 line-height: 1.7;
+
 margin-bottom: 30px;
+
 }
 
 .cta-btn {
+
 display: inline-block;
+
 padding: 14px 30px;
-background: #8b5cf6;
+
+background: #008be5;
+
 color: #ffffff;
+
 text-decoration: none;
+
 border-radius: 30px;
+
 font-weight: 700;
+
 transition: background 0.3s ease, transform 0.2s ease;
+
 }
 
 .cta-btn:hover {
-background: #7c3aed;
+
+background: #07518A;
+
 transform: translateY(-2px);
+
 }
 
 /* =========================
+
 FOOTER
+
 ========================= */
 
 #footer {
-background: #080e1c;
+
+background: #07518A;
+
 padding: 60px 5% 20px;
+
 }
 
 .footer-content {
+
 max-width: 1200px;
+
 margin: auto;
+
 display: grid;
+
 grid-template-columns: 2fr 1fr 1fr;
+
 gap: 50px;
+
 padding-bottom: 40px;
+
 }
 
 .footer-brand h2 {
+
 color: #ffffff;
+
 margin-bottom: 12px;
+
 }
 
 .footer-brand p,
+
 .footer-contact p {
+
 color: #94a3b8;
+
 line-height: 1.8;
+
 }
 
 .footer-links,
+
 .footer-contact {
+
 display: flex;
+
 flex-direction: column;
+
 gap: 10px;
+
 }
 
 .footer-links h3,
+
 .footer-contact h3 {
+
 margin-bottom: 8px;
-color: #ffffff;
+
+color: #252525;
+
 }
 
 .footer-links a {
+
 color: #94a3b8;
+
 text-decoration: none;
+
 transition: color 0.3s ease;
+
 }
 
 .footer-links a:hover {
-color: #8b5cf6;
+
+color: #008be5;
+
 }
 
 .footer-bottom {
+
 max-width: 1200px;
+
 margin: auto;
+
 padding-top: 20px;
+
 border-top: 1px solid rgba(255, 255, 255, 0.08);
+
 text-align: center;
+
 }
 
 .footer-bottom p {
+
 color: #64748b;
+
 font-size: 0.85rem;
+
 }
 
 /* =========================
+
 RESPONSIVE
+
 ========================= */
 
 @media (max-width: 768px) {
+
 header{
+
     display:flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
 }
 
 .about-content {
+
     flex-direction: column;
+
     gap: 35px;
+
 }
 
 .about-text .section-title {
+
     text-align: center;
+
 }
 
 .about-text {
+
     text-align: center;
+
 }
 
 .about-text p {
+
     margin-left: auto;
+
     margin-right: auto;
+
 }
 
 .about-image {
+
     max-width: 100%;
+
 }
 
 .about-image img {
+
     height: 300px;
+
 }
 
 .booking-container {
+
     padding: 25px;
+
 }
 
 .booking-fields {
+
     grid-template-columns: 1fr;
+
     gap: 20px;
+
 }
 
 .footer-content {
+
     grid-template-columns: 1fr;
+
     gap: 35px;
+
     text-align: center;
+
 }
 
 .footer-brand {
+
     display:flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
 }
 
 .footer-links,
-.footer-contact {
-    align-items: center;
-}
 
+.footer-contact {
+
+    align-items: center;
+
+}
 
 }

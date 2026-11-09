@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manager Login | Louisiana Hotels & Suites</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <img src="images/Louisiana-hotel-logo.png"
+                 alt="Louisiana Hotels & Suites logo">
+
+            <h1>Management Login</h1>
+
+            <p>Sign in to manage apartment availability.</p>
+
+            <form id="login-form">
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="login-btn">
+                    Sign In
+                </button>
+
+                <p id="login-message"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
