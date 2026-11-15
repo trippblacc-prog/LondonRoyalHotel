@@ -177,33 +177,56 @@ nav ul li a:hover {
 /* Hero Section */
 
 #hero-section {
-
-    background: linear-gradient(
-
+    background-image:
+        linear-gradient(
             rgba(0, 81, 138, 0.68),
-
             rgba(0, 81, 138, 0.78)
-
         ),
+        url('images/hero-image-1.jpg');
 
-                url('images/Louisiana-Hotels-chandelier.jpg') center/cover no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     min-height: 85vh;
-
     width: 100%;
-
     padding: 20px;
-
     text-align: center;
 
+    animation: heroSlideshow 12s infinite;
+}
+
+@keyframes heroSlideshow {
+    0%, 45% {
+        background-image:
+            linear-gradient(
+                rgba(0, 81, 138, 0.68),
+                rgba(0, 81, 138, 0.78)
+            ),
+            url('images/hotelview.jpeg');
+    }
+
+    50%, 95% {
+        background-image:
+            linear-gradient(
+                rgba(0, 81, 138, 0.68),
+                rgba(0, 81, 138, 0.78)
+            ),
+            url('images/headerimg1.jpeg');
+    }
+
+    100% {
+        background-image:
+            linear-gradient(
+                rgba(0, 81, 138, 0.68),
+                rgba(0, 81, 138, 0.78)
+            ),
+            url('images/hotelview.jpeg');
+    }
 }
 
 #herotext h1 {
@@ -950,7 +973,7 @@ rgba(7, 81, 138, 0.92)
 
 ),
 
-url('images/Louisiana-Hotels-room1.jpg') center/cover no-repeat;
+url('images/headerimg1.jpeg') center/cover no-repeat;
 
 }
 

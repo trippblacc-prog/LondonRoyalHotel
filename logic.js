@@ -16,10 +16,10 @@ if (options.length > 0 && slide) {
 // ROOM AVAILABILITY DATA
 // =========================
 const rooms = {
-    Standard: { name: "Standard Apartment", available: true },
-    Deluxe: { name: "Deluxe Apartment", available: false },
-    Executive: { name: "Executive Apartment", available: true },
-    Premium: { name: "Premium Apartment", available: true }
+    Regular: { name: "Regular Room", available: true },
+    Standard: { name: "Standard Room", available: false },
+    SemiExecutive: { name: "Semi-Executive Room", available: true },
+    Executive: { name: "Executive Room", available: true }
 };
 
 // Elements (Declared ONCE)
@@ -131,7 +131,7 @@ if (bookingForm) {
             return;
         }
 
-        const hotelWhatsApp = "2347068629376";
+        const hotelWhatsApp = "2349116538122";
         const roomName = rooms[selectedRoom].name;
         
         const checkIn = document.querySelector("#check-in")?.value || "";
